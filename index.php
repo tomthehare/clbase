@@ -17,9 +17,8 @@ include_once 'craigslist_query_coordinator.php';
 // Let's shift gears and start on the actual querying of craigslist...
 $clqc = new CraigslistQueryCoordinator();
 $clqc->set_neighborhood('brookline');
+$clqc->search_listings();
 
-// debug_print($clqc->render_url());
 
-$string = file_get_contents($clqc->render_url());
 
-var_dump(urlencode($string));  
+
